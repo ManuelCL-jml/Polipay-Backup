@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>transacciones</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+
+<h1 class="m-5">Transacciones</h1>
+<div class=" my-5 p-3 table-responsive">
+<table class="table table-hover align-middle">
+  <thead>
+    <tr>
+      <th scope="col"># </th>
+	  <th scope="col" style="width: 10rem">Fecha emisor</th>
+      <th scope="col">Cta beneficiario</th>
+      <th scope="col">Clave rastreo</th>
+      <th scope="col">Nombre beneficiario</th>
+      <th scope="col">Monto</th>
+      <th scope="col">Concepto pago</th>
+      <th scope="col">Referencia númerica</th>
+      <th scope="col">Nombre emisor</th>
+      <th scope="col">Cuenta emisor</th>
+    </tr>
+  </thead>
+  <tbody>
+{% for tran in trans %}
+    <tr>
+      <th scope="row">{{ tran.id }}</th>
+      <td>{{ tran.fecha_creacion | date:"M d, Y P"  }}</td>
+      <td>{{ tran.cta_beneficiario }}</td>
+      <td>{{ tran.clave_rastreo }}</td>
+      <td>{{ tran.nombre_beneficiario }}</td>
+      <td>{{ tran.monto }}</td>
+      <td>{{ tran.concepto_pago }}</td>
+      <td>{{ tran.referencia_numerica }}</td>
+      <td>{{ tran.nombre_emisor }}</td>
+      <td>{{ tran.cuenta_emisor }}</td>
+    </tr>
+  {% endfor %}
+
+  </tbody>
+</table>
+</div>
+
+
+
+</body>
+</html>

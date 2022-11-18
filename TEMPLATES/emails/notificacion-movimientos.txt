@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Email Confirmación</title>
+
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+	<style type="text/css">
+
+		* {
+			font-family: 'Roboto', sans-serif;
+		}
+
+		.container {
+			width: 600px;
+			margin: 0 auto;
+			box-shadow: 0 0 5px 2px rgba(0,0,0,.2);
+		}
+
+		header {
+			padding:25px 0;
+		}
+
+		header .logo {
+			width: 15%;
+			display: inline-block;
+			padding:0 15px;
+			float: right:
+		}
+
+		header .logo img {
+			display: block;
+			width: 100%;
+		}
+
+		header .banner-head {
+			width: 75%;
+			margin-top: 10px;
+			display: inline-block;
+			float: right;
+			text-align: left;
+		}
+
+		section article {
+			padding:0 15px 25px 15px;
+			color: #232f34;
+			font-size: 14px;
+		}
+
+		section article h1 {
+			font-weight: 900;
+			font-size: 28px;
+		}
+
+		section article h1.status {
+			color: #223e92 !important;
+		}
+
+		section article a {
+			color: #255ea9;
+			font-weight: 700;
+		}
+
+		section article a:hover, section article a:visited {
+			color: #254193;
+			text-decoration: nonne;
+		}
+
+		section article .data {
+			font-weight: 700;
+		}
+
+		section article .tarjeta {
+			color: #254193;
+			font-weight: 700px;
+		}
+
+		section article .folio {
+			color: #254193;
+			font-weight: 700;
+		}
+
+		section article .datos-deposito {
+		    font-size: 1.5rem;
+		    font-weight: 700;
+		    color: #223E92;
+		}
+
+		footer {
+			background-image: url('img/slide-principal.png');
+			background-repeat: none;
+			background-size: cover;
+			height: 192px;
+			padding: 15px 15px 0px 15px;
+			color: #ffffff;
+		}
+
+		footer h1 {
+			font-size: 28px;
+			line-height: 37px;
+			font-weight: 900;
+		}
+
+		footer h1 {
+			font-size: 28px;
+			line-height: 37px;
+			font-weight: 900;
+		}
+
+		footer .signature {
+			width: 100%;
+			height: 20px;
+			margin-bottom: 10px;
+			display: block;
+		}
+
+		footer .signature ul {
+			list-style: none;
+			padding-left: 0px;
+		}
+
+		footer .signature ul li {
+			float: left;
+			padding-left: 0;
+		}
+
+		footer .signature ul li a {
+			margin: 0 10px;
+			color: #ffffff;
+			text-decoration: none;
+		}
+
+		footer .signature ul li a:hover {
+			text-decoration: underline;
+		}
+
+		footer .signature ul li a .mail-icon {
+			background-image: url(img/mail-icon.png);
+			background-position: center;
+			display: inline-block;
+			width: 14px;
+			height: 15px;
+			margin-right: 8px;
+		}
+
+		footer .signature ul li a .page-icon {
+			background-image: url(img/Trazado2687.png);
+			background-position: center;
+			background-size: cover;
+			display: inline-block;
+			width: 19px;
+			height: 15px;
+			margin-right: 8px;
+		}
+
+		footer .copy {
+			width: 100%;
+			height: 20px;
+			margin-bottom: 10px;
+			display: block;
+		}
+
+		.avisos {
+			background-color: #0e0e16;
+			padding: 20px 15px;
+			font-family: 'Roboto', sans-serif;
+			font-size: 9px;
+			text-align: justify;
+			color: #ffffff;
+		}
+
+  </style>
+
+</head>
+<body>
+	<div class="container">
+		<header>
+			<div class="logo">
+				<img src="img/polipay-lg.png" srcset="img/polipay-lg@2x.png 2x, img/polipay-lg@3x.png 3x">
+			</div>
+			<div class="banner-head">
+				<img src="img/experience-bar.png" srcset="img/experience-bar@2x.png 2x, img/experience-bar@3x.png 3x">
+			</div>
+		</header>
+		<section>
+			<article>
+				<h4>Apreciable {{name}}</h4>
+				<p>Se ha registrado un cambio en el estado de la transferencia que has generado.</p>
+				<p>Observaciones: <span class="datos-deposito">{{ observations }}</span></p>
+				<p>Estado: <span class="datos-deposito">{{status}}</span></p>
+				<p>Puedes conocer los detalles en:</p>
+				<p><a href="https://sistemas.polipay.mx/" target="_blank">https://sistemas.polipay.mx/</a></p>
+			</article>
+		</section>
+		<footer>
+			<div class="slogan">
+				<h1>¡Sácale provecho a la <br>Experiencia Polipay!</h1>
+			</div>
+			<div class="signature">
+				<ul>
+					<li><a href="mailto:contacto@polipay.com"><span class="mail-icon"> </span>contacto@polipay.com</a></li>
+					<li><a href="https://polipay.mx/" target="_blank"><span class="page-icon"> </span>polipay.mx</a></li>
+				</ul>
+			</div>
+			<div class="copy">
+				Polipay © 2022
+			</div>
+		</footer>
+		<div class="avisos">
+			<p><b>Aviso de confidencialidad:</b> Este correo electrónico y en conjunto con todos sus anexos pueden contener información de carácter privilegiada y confidencial enviada para uso exclusivo para el conocimiento y tratamiento del destinatario. Si usted ha recibido este mensaje por error, agradecemos de la manera más atenta el notificar al remitente inmediatamente; solicitando su ayuda con la eliminación del mensaje en conjunto de sus anexos.</p>
+			<p><b>Aviso de privacidad:</b> En cumplimiento a lo dispuesto por la Ley Federal de Protección de Datos Personales en Posesión de los Particulares y su Reglamento vigente, en PP, "PoliPay", hace de su conocimiento que su información personal será utilizada para los siguientes fines: proveer los servicios o programas que ha solicitado; notificarle sobre nuevos servicios con relación a los ya contratados o adquiridos; comunicarle sobre cambios en los mismos; elaborar estudios y programas que son necesarios para determinar hábitos nuevos, evaluar la calidad del servicio que brindamos, y en general, para dar cumplimiento a las obligaciones que hemos contraído con usted.</p>
+			<p>Para cualquier información relacionada a los presentes avisos o derivados del Acceso, Rectificación y Cancelación de sus datos personales, o a Oponerse al tratamiento de los mismos o a revocar el consentimiento que para dicho fin nos haya otorgado, favor de comunicarse a la coordinación de Polipay responsable de nuestro Departamento de Protección de Datos Personales al teléfono + 52 (33) 39270735 o vía correo electrónico a info@polipay.com el cual solicitamos confirme vía telefónica para garantizar su correcta recepción.</p>
+		</div>
+	</div>
+
+</body>
+</html>

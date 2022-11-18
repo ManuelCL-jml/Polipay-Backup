@@ -1,0 +1,6 @@
+TYPE_ACCOUNT = (
+    (1, 'SIN ESPECIFICAR'),
+    (3, 'TARJETA DEBITO'),
+    (10, 'TELEFONO CELULAR'),
+    (40, 'CLABE')
+)
